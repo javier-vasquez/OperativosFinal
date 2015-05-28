@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -17,6 +18,7 @@ import java.util.List;
 
 import javax.swing.JScrollPane;
 import javax.swing.DefaultComboBoxModel;
+
 import java.awt.Font;
 import java.awt.Color;
 
@@ -148,7 +150,10 @@ public class GUI extends JFrame {
 		btnIniciar.setBackground(new Color(102, 204, 0));
 		btnIniciar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
+			List<Integer> numSesiones=new ArrayList<Integer>();
+			for(int k=0;k<Integer.parseInt(textField.getText());k++){
+				numSesiones.add(Integer.parseInt(JOptionPane.showInputDialog("¿Cuantas sesiones en la Maquina "+(k+1)+"?")));
+			}
 				new Thread(new Runnable() {
 					int time=Integer.parseInt(textField_2.getText());
 					boolean a=true;
@@ -176,19 +181,19 @@ public class GUI extends JFrame {
 					@Override
 					public void run() {
 				
-				List<Usuario> usuarios= new ArrayList<Usuario>();
+				List<TipoUsuario> usuarios= new ArrayList<TipoUsuario>();
 				
 				for(int i=0;i<Integer.parseInt((String)com.getSelectedItem());i++){
-					usuarios.add(Usuario.T1);
+					usuarios.add(TipoUsuario.T1);
 				}
 				for(int i=0;i<Integer.parseInt((String)comboBox_1.getSelectedItem());i++){
-					usuarios.add(Usuario.T2);
+					usuarios.add(TipoUsuario.T2);
 				}
 				for(int i=0;i<Integer.parseInt((String)comboBox_2.getSelectedItem());i++){
-					usuarios.add(Usuario.T3);
+					usuarios.add(TipoUsuario.T3);
 				}
 				
-				Main main= new Main(usuarios,0,Integer.parseInt(textField_1.getText()),Integer.parseInt(textField_2.getText()));
+				Main main= new Main(usuarios,numSesiones,Integer.parseInt(textField_1.getText()),Integer.parseInt(textField_2.getText()));
 				try {
 					main.iniciar();
 				} catch (IOException e) {

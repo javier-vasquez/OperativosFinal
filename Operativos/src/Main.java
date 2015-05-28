@@ -6,15 +6,15 @@ import java.util.List;
 
 
 public class Main {
-	private List<Usuario> tipoUsuariosMaquinas;
-	private int numSesiones;
+	private List<TipoUsuario> tipoUsuariosMaquinas;
+	private List<Integer> numSesiones;
 	private int runtime;
 	private int numBlogs;
 	Thread m1 = null;
 	List<Thread> l= new ArrayList<Thread>();
 	
 
-	public Main(List<Usuario> tipoUsuariosMaquinas, int numSesiones,int numBlogs,int runtime) {
+	public Main(List<TipoUsuario> tipoUsuariosMaquinas, List<Integer> numSesiones,int numBlogs,int runtime) {
 		super();
 		this.tipoUsuariosMaquinas = tipoUsuariosMaquinas;
 		this.numSesiones = numSesiones;
@@ -31,9 +31,16 @@ public class Main {
 	    PrintWriter pw = new PrintWriter(fichero);
 	    System.out.println("Crea el archivo");
 		
+	    
+	    pw.println("Se Generaron "+tipoUsuariosMaquinas.size()+" Maquinas");
+	    
+	    for(int i=0;i<tipoUsuariosMaquinas.size();i++){
+	    pw.println("La maquina "+i+" genero:"+numSesiones.get(i)+" de tipo "+tipoUsuariosMaquinas.get(i));
+	    }
+	    
 		for(int i=0;i<tipoUsuariosMaquinas.size();i++){
 			
-			Maquina maquina = new Maquina(tipoUsuariosMaquinas.get(i),pw,numBlogs);
+			Maquina maquina = new Maquina(tipoUsuariosMaquinas.get(i),pw,numBlogs,numSesiones.get(i));
 	        l.add(new Thread(maquina, "Maquina_"+i));
 	        l.get(i).start();
 		}

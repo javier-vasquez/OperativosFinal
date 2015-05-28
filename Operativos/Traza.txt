@@ -1,0 +1,31 @@
+Se Generaron 4 Maquinas
+La maquina 0 genero:5T1
+La maquina 1 genero:2T2
+La maquina 2 genero:3T2
+La maquina 3 genero:1T3
+11:52:40 - Maquina_2 - Sesion 1 - T2 -  Exit!
+11:52:40 - Maquina_1 - Sesion 0 - T2 -  Start Reading Blog 2
+11:52:40 - Maquina_1 - Sesion 1 - T2 -  Start Reading Blog 4
+11:52:40 - Maquina_2 - Sesion 0 - T2 -  Start Reading Blog 2
+11:52:40 - Maquina_2 - Sesion 2 - T2 -  Start Reading Blog 2
+11:52:41 - Maquina_3 - Sesion 0 - T3 -  Continue Reading Blog
+11:52:42 - Maquina_2 - Sesion 0 - T2 -  Exit!
+11:52:42 - Maquina_1 - Sesion 0 - T2 -  Start Reading Blog 3
+11:52:42 - Maquina_1 - Sesion 1 - T2 -  Exit!
+11:52:42 - Maquina_2 - Sesion 2 - T2 -  Exit!
+11:52:44 - Maquina_3 - Sesion 0 - T3 -  Start Reading Blog 0
+11:52:44 - Maquina_1 - Sesion 0 - T2 -  Exit!
+11:52:46 - Maquina_0 - Sesion 2 - T1 -  Continue Reading Blog
+11:52:46 - Maquina_0 - Sesion 0 - T1 -  Continue Reading Blog
+11:52:46 - Maquina_0 - Sesion 3 - T1 -  Continue Reading Blog
+11:52:46 - Maquina_0 - Sesion 1 - T1 -  Continue Reading Blog
+11:52:46 - Maquina_0 - Sesion 4 - T1 -  Continue Reading Blog
+11:52:47 - Maquina_3 - Sesion 0 - T3 -  Continue Reading Blog
+11:52:50 - Maquina_3 - Sesion 0 - T3 -  Start Reading Blog 0
+11:52:53 - Maquina_3 - Sesion 0 - T3 -  Make Comments in Blog
+11:52:54 - Maquina_0 - Sesion 4 - T1 -  Continue Reading Blog
+11:52:54 - Maquina_0 - Sesion 3 - T1 -  Start Reading Blog 3
+11:52:54 - Maquina_0 - Sesion 0 - T1 -  Start Reading Blog 2
+11:52:54 - Maquina_0 - Sesion 1 - T1 -  Start Reading Blog 2
+11:52:54 - Maquina_0 - Sesion 2 - T1 -  Continue Reading Blog
+11:52:56 - Maquina_3 - 5673 - T3 -  Make Comments in Blog

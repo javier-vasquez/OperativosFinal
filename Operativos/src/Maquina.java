@@ -1,28 +1,32 @@
 import java.io.PrintWriter;
+import java.util.List;
 
 
 
 public class Maquina implements Runnable {
-	private Usuario tipoUsuario;
+	private TipoUsuario tipoUsuario;
 	 PrintWriter pw;
 	 int numBlogs;
+		private int numSesiones;
 	
 
-	public Maquina(Usuario tipoUsuario, PrintWriter pw,int numBlogs) {
+	public Maquina(TipoUsuario tipoUsuario, PrintWriter pw,int numBlogs,int numSesiones) {
 		super();
 		this.tipoUsuario = tipoUsuario;
 		this.pw = pw;
 		this.numBlogs=numBlogs;
+		this.numSesiones=numSesiones;
 	}
 
 
 
 	@Override
     public void run() {
-		
-			Sesion sesion= new Sesion(tipoUsuario,Thread.currentThread().getName(),pw,numBlogs);
-			Thread s1 = new Thread(sesion, "Sesion_");
+		for(int i=0;i<this.numSesiones;i++){
+			Usuario sesion= new Usuario(tipoUsuario,Thread.currentThread().getName(),pw,numBlogs);
+			Thread s1 = new Thread(sesion, "Sesion "+i);
 			s1.start();
+		}
     }
 
 
