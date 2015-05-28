@@ -101,7 +101,6 @@ switch(u){
 	case T2:
 		int random1;
     	int idBlog1=0;
-		int numSesion1=(int)(Math.random()*999);
 		
 		int estado1 = 1; // Start Reading New Blog
 		while(estado1 != -1){
@@ -182,7 +181,7 @@ switch(u){
 	case T3:
 		int random11;
     	int idBlog11=0;
-		int numSesion11=(int)(Math.random()*9999);
+
 		
 		int estado11 = 1; // Start Reading New Blog
 		while(estado11 != -1){
@@ -264,8 +263,8 @@ switch(u){
 					 Calendar cal = Calendar.getInstance();
 				    	cal.getTime();
 				    	SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-				 	pw.println(sdf.format(cal.getTime())+" - "+padre+" - "+numSesion11+" - "+this.tipoUsuario+" - "+" Exit!");
-					System.out.println(sdf.format(cal.getTime())+" - "+padre+" - "+numSesion11+" - "+this.tipoUsuario+" - "+" Exit!");
+				 	pw.println(sdf.format(cal.getTime())+" - "+padre+" - "+numSesion+" - "+this.tipoUsuario+" - "+" Exit!");
+					System.out.println(sdf.format(cal.getTime())+" - "+padre+" - "+numSesion+" - "+this.tipoUsuario+" - "+" Exit!");
 			 	}
 			 break;
 			 case 3:
@@ -275,8 +274,8 @@ switch(u){
 					 Calendar cal = Calendar.getInstance();
 				    	cal.getTime();
 				    	SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-				 	pw.println(sdf.format(cal.getTime())+" - "+padre+" - "+numSesion11+" - "+this.tipoUsuario+" - "+" Make Comments in Blog");
-					System.out.println(sdf.format(cal.getTime())+" - "+padre+" - "+numSesion11+" - "+this.tipoUsuario+" - "+" Make Comments in Blog");
+				 	pw.println(sdf.format(cal.getTime())+" - "+padre+" - "+numSesion+" - "+this.tipoUsuario+" - "+" Make Comments in Blog");
+					System.out.println(sdf.format(cal.getTime())+" - "+padre+" - "+numSesion+" - "+this.tipoUsuario+" - "+" Make Comments in Blog");
 				 }else if(random11 <=99){ // 76 + 23  --START READING NEW BLOG
 					 estado11 = 1;
 					 int a=-1;
@@ -290,7 +289,7 @@ switch(u){
 					 Calendar cal = Calendar.getInstance();
 				    	cal.getTime();
 				    	SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-				 	pw.println(sdf.format(cal.getTime())+" - "+padre+" - "+numSesion11+" - "+this.tipoUsuario+" - "+" Start Reading Blog "+idBlog11);
+				 	pw.println(sdf.format(cal.getTime())+" - "+padre+" - "+numSesion+" - "+this.tipoUsuario+" - "+" Start Reading Blog "+idBlog11);
 					System.out.println(sdf.format(cal.getTime())+" - "+padre+" - "+numSesion+" - "+this.tipoUsuario+" - "+" Start Reading Blog "+idBlog11);
 				 }else {//ex
 				 		estado11 = -1;
