@@ -18,6 +18,7 @@ import java.util.List;
 import javax.swing.JScrollPane;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.Font;
+import java.awt.Color;
 
 
 public class GUI extends JFrame {
@@ -50,6 +51,7 @@ public class GUI extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 210, 479);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(102, 255, 102));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -143,6 +145,7 @@ public class GUI extends JFrame {
 		contentPane.add(btnAceptar);
 		
 		JButton btnIniciar = new JButton("Iniciar");
+		btnIniciar.setBackground(new Color(102, 204, 0));
 		btnIniciar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -153,7 +156,8 @@ public class GUI extends JFrame {
 					public void run() {
 						label.setText(time+"s");
 						while(a){
-							
+							if (time==0)
+								setVisible(false);
 							try {
 								Thread.sleep(1000);
 							} catch (InterruptedException e) {

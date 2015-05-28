@@ -27,7 +27,7 @@ public class Main {
 		
 	    
 
-	    FileWriter fichero=new FileWriter("C:/Users/Javier/Desktop/prueba.txt");
+	    FileWriter fichero=new FileWriter("Traza.txt");
 	    PrintWriter pw = new PrintWriter(fichero);
 	    System.out.println("Crea el archivo");
 		
